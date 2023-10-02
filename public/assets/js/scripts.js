@@ -199,10 +199,23 @@ Version      : 1.6
 						subject: subject,
 						message: msg
 					},
-					success: (data) => console.log(data),
+					beforeSend: ()=>{
+						$('#contact_overlay').css({display: "flex"});
+					},
+					complete: ()=>{
+						$("#contact_overlay_success").css({display: "flex"});
+						$("#name").val('')
+						$("#phone").val('')
+						$("#subject").val('')
+						$("#message").val('')
+						setTimeout(()=>{$("#contact_overlay_success").css({display: "none"});$('#contact_overlay').css({display: "none"});},2000)
+					},
+					success: (data) => {
+						console.log(data);						
+					},
 					error: (err) => console.log(err)
 				});
-			}			
+			}
 		});
 			
 	}); 	
