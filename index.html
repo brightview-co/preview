@@ -559,6 +559,19 @@
 			border-color: #fff;
 			background: #f9461d;
 		}
+		.bv_single_gallery{
+			display: grid;
+            height: 100%;
+		}
+		.bv_single_gallery img{
+			max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+		}
+		.bv_scroll {
+			font-family: 'Roboto' !important;
+		}
+
 		.bv_spinner {
   			height: 60px;
   			width: 60px;
@@ -667,11 +680,14 @@
 	<link rel='stylesheet' id='themify-icons-css' href='./public/assets/fonts/themify-icons.css?ver=6.3.1' type='text/css' media='all' />
 	<link rel='stylesheet' id='owl-carousel-css' href='./public/assets/owlcarousel/css/owl.carousel.css?ver=6.3.1' type='text/css' media='all' />
 	<link rel='stylesheet' id='owl-theme-css' href='./public/assets/owlcarousel/css/owl.theme.css?ver=6.3.1' type='text/css' media='all' />
+	<link rel='stylesheet' id='flexslider-css' href='./public/assets/css/flexslider.css?ver=6.3.1' type='text/css' media='all' />
+	<link rel='stylesheet' id='aos-css' href='./public/assets/css/aos.css?ver=6.3.1' type='text/css' media='all' />
 	<link rel='stylesheet' id='slicknav-css' href='./public/assets/css/slicknav.css?ver=6.3.1' type='text/css' media='all' />
 	<link rel='stylesheet' id='vromon-main-style-css' href='./public/assets/css/style.css?ver=6.3.1' type='text/css' media='all' />
 	<link rel='stylesheet' id='vromon-style-css' href='./public/assets/css/v_style.css?ver=6.3.1' type='text/css' media='all' />
 	<link rel='stylesheet' id='wpc-form-7-style-css' href='./public/assets/css/wpcf7.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='kc-general-css' href='./public/assets/kingcomposer/css/kingcomposer.min.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='kc-animate-css' href='./public/assets/kingcomposer/css/animate.css?ver=2.9.6' type='text/css' media='all' /> 
 	<script type='text/javascript' src='./public/assets/jquery/query.min.js?ver=3.7.0' id='jquery-core-js'></script>
 	<script type='text/javascript' src='./public/assets/jquery/jquery-migrate.min.js?ver=3.4.1' id='jquery-migrate-js'></script>		
 	<style type="text/css" id="kc-css-general">
@@ -749,6 +765,10 @@
 			<div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
 				<nav>
 					<ul id="menu-main-menu" class="navbar-nav">
+						<li id="menu-item-141"
+							class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-157 nav-item">
+							<a href="#about-us" aria-current="page">About Us</a>
+						</li>
 						<li id="menu-item-157"
 							class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-157 nav-item">
 							<a href="#service" aria-current="page">Services</a>
@@ -773,36 +793,27 @@
 
 	<!-- START Home Slider REVOLUTION SLIDER 6.6.15 -->
 	<p class="rs-p-wp-fix"></p>
-	<rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery"
-		style="visibility:hidden;background:#000000;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+	<rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery" style="visibility:hidden;background:#000000;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
 		<rs-module id="rev_slider_1_1" style="" data-version="6.6.15">
 			<rs-slides style="overflow: hidden; position: absolute;">
-				<rs-slide style="position: absolute;" data-key="rs-1" data-title="Slide"
-					data-thumb="./public/img/why_choose_us_bg.png"
-					data-anim="d:15;ms:1000;f:edges;"
-					data-in="prst:rndany;o:0;x:cyc(-10|10);y:cyc(-10|10);r:cyc(-10|10);sx:0.1;sy:0.1;row:20;col:20;"
-					data-alttrans="random-static,random,random-premium">
-					<img src="./public/img/why_choose_us_bg.png"
-						alt="" title="slider_1" width="1920" height="1200" class="rev-slidebg tp-rs-img rs-lazyload"
-						data-lazyload="./public/img/why_choose_us_bg.png"
-						data-no-retina>
-					<!--
-							--><rs-layer id="slider-1-slide-1-layer-1" data-type="text" data-color="rgba(255,255,255,1)" data-rsp_ch="on"
-						data-xy="x:c;y:m;yo:-58px,-58px,-40px,-40px;" data-text="s:70,70,40,30;l:22;fw:700;"
-						data-frame_0="sX:0.9;sY:0.9;" data-frame_1="st:500;sp:1500;"
+				<rs-slide style="position: absolute;" data-key="rs-1" data-title="Slide" data-thumb="./public/img/led_screen_blue.png" data-anim="d:15;ms:1000;f:edges;" data-in="prst:rndany;o:0;x:cyc(-10|10);y:cyc(-10|10);r:cyc(-10|10);sx:0.1;sy:0.1;row:20;col:20;" data-alttrans="random-static,random,random-premium">
+					<img src="./public/img/led_screen_blue.png" alt="" title="slider_1" width="1920" height="1200" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="./public/img/led_screen_blue.png" data-no-retina>
+					<rs-layer id="slider-1-slide-1-layer-1" data-type="text" data-color="rgba(255,255,255,1)"
+						data-rsp_ch="on" data-xy="x:c;y:m;yo:-58px,-58px,-40px,-40px;"
+						data-text="s:70,70,40,30;l:22;fw:700;" data-frame_0="sX:0.9;sY:0.9;" data-frame_1="st:500;sp:1500;"
 						data-frame_999="o:0;e:nothing;st:w;"
-						style="z-index:5;font-family:'Montserrat';text-transform:uppercase;">Displaying Your Soul
-					</rs-layer><!--
-
-							--><rs-layer id="slider-1-slide-1-layer-2" data-type="text" data-color="rgba(255,255,255,1)" data-rsp_ch="on"
-						data-xy="x:c;y:m;yo:37px,37px,40px,40px;" data-text="w:normal;s:15,15,15,13;l:28;a:center;"
+						style="z-index:5;font-family:'Montserrat';"><!--text-transform:uppercase;-->
+						LED Video wall screens
+					</rs-layer>
+					<rs-layer id="slider-1-slide-1-layer-2" data-type="text" data-color="rgba(255,255,255,1)"
+						data-rsp_ch="on" data-xy="x:c;y:m;yo:37px,37px,40px,40px;"
+						data-text="w:normal;s:15,15,15,13;l:28;a:center;"
 						data-dim="w:564px,564px,564px,478px;h:66px,66px,66px,auto;" data-frame_0="x:-100%;o:1;"
 						data-frame_0_mask="u:t;" data-frame_1="st:500;sp:1500;" data-frame_1_mask="u:t;"
-						data-frame_999="o:0;e:nothing;st:w;" style="z-index:6;font-family:'Open Sans';">Bright view led video walls
-					</rs-layer><!--
---> </rs-slide>
-				
-				
+						data-frame_999="o:0;e:nothing;st:w;" style="z-index:6;font-family:Montserrat, sans-serif;font-size: 30px;">
+						<span class="bv_scroll">Displaying Your Soul</span>
+					</rs-layer>
+				</rs-slide>
 			</rs-slides>
 		</rs-module>
 	</rs-module-wrap>
@@ -812,6 +823,53 @@
 
 	<div id="kc_page_template">
 		<div class="kc_clfw"></div>
+
+		<section class="kc-elm kc-css-395952 kc_row">
+			<div class="kc-row-container">
+				<div class="kc-wrap-columns">
+					<div class="kc-elm kc-css-217600 kc_col-sm-12 kc_column kc_col-sm-12">
+						<div class="kc-col-container">
+							<!-- START SERVICES -->
+							<section id="about-us" class="our_services" style="background-color: white;">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-12 text-center">
+											<div class="section-title">
+												<h2>About Us</h2>
+												<span></span>												
+											</div>
+										</div>
+									</div>
+									<div class="row text-center">
+										<div class="col-lg-12 col-sm-12 col-xs-12" data-aos="fade-up">
+											<div class="service">
+												<div class="icon"><i class="fa fa-user"></i></div>
+												<h4></h4>
+												<p>
+													<b>Bright View & Co. is a leading provider of LED video wall rental services for indoor and outdoor events. 
+													We offer a wide range of LED video wall sizes and configurations to meet the needs of any event, 
+													from small trade shows to large concerts and festivals. Our indoor LED video walls are perfect for presentations, 
+													corporate events, and weddings. They produce stunning visuals with high brightness, contrast, and color accuracy, 
+													and can be configured in a variety of sizes and shapes to fit any event space. 
+													Our outdoor LED video walls are designed to withstand the elements and produce bright and clear visuals in all lighting conditions. 
+													They are perfect for outdoor events, advertising, and branding. At Bright View & Co., 
+													we understand that every event is different. That's why we offer a personalized approach to each and every rental. 
+													We work with our clients to understand their needs and goals, and then recommend the best LED video wall solution for their event. 
+													Also Create a stunning visual experience with Bright View & Co.'s LED video walls for fixed installations like, Digital signage,
+													Outdoor displays,Control rooms,Corporate events,Museums,Retail stores,Sports venues and more! </b></p>																								
+											</div>
+										</div><!-- END COL -->															
+									</div><!-- END ROW -->
+								</div><!-- END CONTAINER -->
+							</section>
+							<!-- END SERVICES -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<section class="kc-elm kc-css-395952 kc_row">
 			<div class="kc-row-container">
 				<div class="kc-wrap-columns">
@@ -823,9 +881,13 @@
 									<div class="row">
 										<div class="col-md-12 text-center">
 											<div class="section-title">
-												<h2>Bright View services</h2>
+												<h2>Our services</h2>
 												<span></span>
-												<p>Here is the solution for your events to make memorable and displays and immersive experience</p>
+												<b>
+													We offer a wide range of LED video wall sizes and configurations to meet the needs of any event. Our indoor and outdoor LED video walls produce stunning visuals in all lighting conditions. 
+													We offer a personalized approach to each and every rental. We provide a variety of value-added services, such as setup and takedown, delivery and pickup, and on-site support. 
+													We are committed to providing our clients with the best possible service and support. Contact us today to learn more about our LED video wall rental services and how we can help you make your next event a success!
+												</b>
 											</div>
 										</div>
 									</div>
@@ -835,9 +897,9 @@
 												<div class="icon"><i class="fa fa-plane"></i></div>
 												<h4>Indoor LED WALLS - Rental</h4>
 												<ul>
-													<li>Stunning visuals with high brightness, contrast, and color accuracy.</li>
-													<li>Versatility, as it can be used for a variety of indoor applications, including trade shows conferences, corporate events, weddings, and concerts.</p>
-													<li>Flexibility, as it can be configured in a variety of sizes and shapes to fit any event space or layout.</li>
+													<li><b>Stunning visuals</b>: LED video walls produce stunning visuals with high brightness, contrast, and color accuracy, making them ideal for indoor events and presentations.</li>
+													<li><b>Versatility</b>: LED video walls can be used for a variety of indoor applications, including trade shows, conferences, corporate events, weddings, and concerts.</p>
+													<li><b>Flexibility</b>: LED video walls can be configured in a variety of sizes and shapes to fit any event space or layout. Easy setup and takedown: LED video walls are easy to set up and take down, making them ideal for short-term rentals. </li>
 												</ul>												
 											</div>
 										</div><!-- END COL -->
@@ -846,9 +908,10 @@
 												<div class="icon"><i class="fa fa-ticket"></i></div>
 												<h4>Outdoor LED Walls - Rental</h4>
 												<ul>
-													<li>Designed to produce bright and clear visuals in all lighting conditions, making them ideal for outdoor events.</li>
-													<li>Weatherproof and can withstand a variety of outdoor conditions, including rain, snow, and wind.</li>
-													<li>Durable and can withstand heavy use, making them ideal for long-term rentals.</li>
+													<li><b>Bright and clear visuals</b>: Outdoor LED video walls are designed to produce bright and clear visuals in all lighting conditions, making them ideal for outdoor events and advertising.</li>
+													<li><b>Weatherproof</b>: Outdoor LED video walls are weatherproof and can withstand a variety of outdoor conditions, including rain, snow, and wind.</li>
+													<li><b>Durable</b>: Outdoor LED video walls are durable and can withstand heavy use, making them ideal for long-term rentals.</li>
+													<li><b>Large format</b>: Outdoor LED video walls can be configured in very large sizes, making them ideal for outdoor advertising and branding</li>
 												</ul>
 												
 											</div>
@@ -878,6 +941,10 @@
 				</div>
 			</div>
 		</section>
+
+		
+
+
 		<section class="kc-elm kc-css-111218 kc_row">
 			<div class="kc-row-container">
 				<div class="kc-wrap-columns">
@@ -885,14 +952,16 @@
 						<div class="kc-col-container">
 							<!-- START WHY CHOOSE US -->
 							<section data-stellar-background-ratio="0.3" class="why_choose section-padding"
-								style="background-image: url(./public/img/main_image.jpg);  background-size:cover; background-position: center center;">
+								style="background-image: url(./public/img/hd_pencil_screen.jpg);  background-size:cover; background-position: center center;">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-12" data-aos="fade-up">
 											<div class="section-title text-center">
-												<h2 class="section-title-white">why choose us</h2>
+												<h2 class="section-title-white">What Drive Us</h2>
 												<span class="section-title-white"></span>
-												<p class="section-title-white">Through our wide range of both indoor and outdoor LED video wall of any sizes and configurations to meet the needs of your events..</p>
+												<p class="section-title-white">
+													<!-- Why choose Us for your LED video wall rental needs?  -->
+												</p>
 											</div>
 										</div><!-- END COL -->
 									</div><!-- END ROW -->
@@ -947,6 +1016,66 @@
 				</div>
 			</div>
 		</section>
+
+		<section class="kc-elm kc-css-906336 kc_row">
+			<div class="kc-row-container">
+				<div class="kc-wrap-columns">
+					<div class="kc-elm kc-css-819138 kc_col-sm-12 kc_column kc_col-sm-12">
+						<div class="kc-col-container"><!-- START TESTIMONIAL -->
+							<section class="testimonial-demo section-padding">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-12 text-center" data-aos="fade-up">
+											<div class="section-title">
+												<h2>What our client say</h2>
+												<span></span>
+												<p>Testimonials from our satisfied customers </p>
+											</div>
+										</div><!-- END COL -->
+									</div><!-- END ROW -->
+									<div class="row">
+		
+										<div class="col-md-12">
+											<div id="testimonial-slider" class="owl-carousel">
+												<div class="testimonial">
+													<div class="testimonial-content">
+														<div class="testimonial-icon">
+															<i class="fa fa-quote-left"></i>
+														</div>
+														<p class="description">
+															Super led wall for our outdoor works
+															Good staffs too
+															Price low when compared to others 
+														</p>
+													</div>
+													<h3 class="title">sibi p.s</h3>
+													<!-- <span class="post">Web Designer</span> -->
+												</div>
+												<div class="testimonial">
+													<div class="testimonial-content">
+														<div class="testimonial-icon">
+															<i class="fa fa-quote-left"></i>
+														</div>
+														<p class="description">
+															Best Led video screens for all events
+														</p>
+													</div>
+													<h3 class="title">Sk Kc</h3>
+													<!-- <span class="post">Web Designer</span> -->
+												</div>														
+											</div>
+		
+										</div>
+		
+									</div>
+								</div>
+							</section>
+							<!-- END TESTIMONIAL -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 				
 		
 		<section class="kc-elm kc-css-803962 kc_row">
@@ -971,28 +1100,32 @@
 										<div class="col-md-12" data-aos="fade-up">
 											<div id="gallery-slider" class="owl-carousel">
 
-												<div class="single_gallery">
-													<img src="./public/img/gallary_1.jpeg"
+												<div class="single_gallery bv_single_gallery">
+													<img src="./public/img/gallary/led_screen_blue.png"
+														class="img-gallery" alt="" />		
+														<!-- <div class="gallery_info">
+															<h1>Tours</h1>
+															<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+														</div>											 -->
+												</div><!-- END SINGLE GALLERY -->
+
+												<div class="single_gallery bv_single_gallery">
+													<img src="./public/img/gallary/concert_led.jpg"
 														class="img-gallery" alt="" />													
 												</div><!-- END SINGLE GALLERY -->
 
-												<div class="single_gallery">
-													<img src="./public/img/gallary_7.jpeg"
+												<div class="single_gallery bv_single_gallery">
+													<img src="./public/img/gallary/street_led.jpg"
 														class="img-gallery" alt="" />													
 												</div><!-- END SINGLE GALLERY -->
 
-												<div class="single_gallery">
-													<img src="./public/img/gallary_2.jpeg"
+												<div class="single_gallery bv_single_gallery">
+													<img src="./public/img/gallary/function_led.jpeg"
 														class="img-gallery" alt="" />													
 												</div><!-- END SINGLE GALLERY -->
 
-												<div class="single_gallery">
-													<img src="./public/img/gallary_6.jpeg"
-														class="img-gallery" alt="" />													
-												</div><!-- END SINGLE GALLERY -->
-
-												<div class="single_gallery">
-													<img src="./public/img/gallary_3.jpeg"
+												<div class="single_gallery bv_single_gallery">
+													<img src="./public/img/gallary/colourful_led.jpeg"
 														class="img-gallery" alt="" />													
 												</div><!-- END SINGLE GALLERY -->
 																																				
