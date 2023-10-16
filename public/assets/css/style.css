@@ -208,7 +208,7 @@ width: 50px;
 	transition: all 0.5s ease 0s;
 }
 @media only screen and (max-width:480px) { 
-.bg-faded {background:rgba(0,0,0,0.9);}
+/* .bg-faded {background:rgba(0,0,0,0.9);} */
 }
 .navbar-brand img {
   width: 150px;
@@ -256,7 +256,7 @@ width: 50px;
     position: fixed;
     opacity: .98;
     width: 100%;
-	padding:27px 0;
+	/* padding:27px 0;  */
     top: 0;
     -webkit-animation: fadeInDown 800ms;
     animation: fadeInDown 800ms;
