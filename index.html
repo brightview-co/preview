@@ -568,6 +568,9 @@
             max-height: 100vh;
             margin: auto;
 		}
+		.bv_youtube_video-wrapper {position: relative; padding-bottom: 46.25%; /* 16:9 */  padding-top: 25px;}
+		.bv_youtube_video-wrapper iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
 		.bv_scroll {
 			font-family: 'Roboto' !important;
 		}
@@ -1128,6 +1131,16 @@
 									<div class="row">
 										<div class="col-md-12" data-aos="fade-up">
 											<div id="gallery-slider" class="owl-carousel">
+
+												<div class="single_gallery bv_youtube_video-wrapper">
+													<iframe src="https://www.youtube.com/embed/dzPwPPTpXxc?autoplay=1&mute=1&loop=1&playlist=dzPwPPTpXxc&controls=0&rel=0&modestbranding=1">														
+													</iframe>													
+												</div><!-- END SINGLE GALLERY YOUTUBE-->
+
+												<div class="single_gallery bv_youtube_video-wrapper">
+													<iframe src="https://www.youtube.com/embed/PlFYRWhrhiQ?autoplay=1&mute=1&loop=1&playlist=PlFYRWhrhiQ&controls=0&rel=0&modestbranding=1">														
+													</iframe>													
+												</div><!-- END SINGLE GALLERY YOUTUBE-->
 
 												<div class="single_gallery bv_single_gallery">
 													<img src="./public/img/gallary/video_image_6.png"
